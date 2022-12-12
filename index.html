@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TweetAI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./tweetai.ico">
+</head>
+<body>
+    <header>TweetAi</header>
+
+    <div class="container" id="app">
+
+        <div class="logo"><img class="logo" src="./TweetAi.png" alt="TweetAi"></div>
+        <div class="form-wrap">
+            <form action="" method="post"></form>
+            <input type="text" id="keyword" v-model="keyword" placeholder="Masukan topik tweet">
+            <button @click="generate()">GENERATE</button>
+        </div>
+
+        <div class="result" id="result" v-if="result">
+            <h3>Result</h3>
+            <blockquote><p>{{result}}</p>
+            <!-- <a class="tweet" :href="tweetLink">TWEET THIS!</a> -->
+            <a class="tweet" target="_blank" :href="clickTweet()">TWEET THIS!</a>
+            </blockquote>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="btn-mobile"><a href="#"><i class="fa-sharp fa-solid fa-house-chimney"></i></a></div>
+        <div class="btn-mobile"><a href="#"><i class="fa-sharp fa-solid fa-house-chimney"></i></a></div>
+        <div class="btn-mobile"><a href="#"><i class="fa-sharp fa-solid fa-house-chimney"></i></a></div>
+        <div class="btn-mobile"><a href="#"><i class="fa-sharp fa-solid fa-house-chimney"></i></a></div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./app.js"></script>
+    <script>
+
+    function showSpinner() {
+        const button = document.querySelector('button');
+        button.disabled = true;
+        button.innerHTML = 'Loading...<span class="spinner">🧠</span>';
+    }
+
+    function hideSpinner() {
+        const button = document.querySelector('button');
+        button.disabled = false;
+        button.innerHTML = 'GENERATE';
+    }
+    </script>
+</body>
+</html>
