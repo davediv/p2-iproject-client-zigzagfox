@@ -1,0 +1,160 @@
+/* RESET */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* CUSTOM */
+.container {
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    max-width: 720px;
+    margin-bottom: 150px;
+}
+
+header {
+    width: 100%;
+    padding: .5rem;
+    background-color: #1DA1F2;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: .5rem;
+    background-color: #1DA1F2;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    color: #fff;
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+input {
+    border: 1px solid #1DA1F2;
+    width: 480px;
+    box-sizing: border-box;
+    padding: 15px 15px;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 8px;
+    background: #1DA1F2;
+    width: 480px;
+    padding: 15px 0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logo {
+    max-width: 240px;
+    height: auto;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto;
+}
+
+hr {
+    margin: 3rem auto;
+    border-top: 1px solid rgb(208, 208, 208);
+}
+
+.btn-mobile {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+
+
+/* BLOCKQOUTE */
+blockquote {
+    /* background: #f9f9f9; */
+    border: 1px solid #bde4fd;
+    border-left: 10px solid #000;
+    border-radius: 5px;
+    margin: 1.5rem;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote:before {
+    color: #1DA1F2;
+    content: open-quote;
+    font-size: 8rem;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+    font-size: 1.6rem;
+  }
+
+.tweet {
+    display: block;
+    margin: 1rem auto;
+    background-color: #1DA1F2;
+    width: 480px;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.spinner {
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
